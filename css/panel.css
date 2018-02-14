@@ -1,0 +1,48 @@
+#jsPanel{
+	display:grid;
+	grid-template-columns: auto 160px 10px 160px 10px 160px 10px 160px 10px 160px 10px 160px 10px 160px auto;
+	grid-template-areas: 
+		"margin1 button1 margin2 button2 margin3 button3 margin4 button4 margin5 button5 margin6 button6 margin7 button7 margin8";
+	padding:30px;
+}
+#jsPanel{
+	padding-top:50px;
+}
+#addBook{
+	grid-area:button5;
+}
+#wypBook{
+	grid-area:button1;
+}
+#editBook{
+	grid-area:button4;
+}
+#raport{
+	grid-area:button2;
+}
+#statyst{
+	grid-area:button3;
+}
+#list{
+	grid-area:button6;
+}
+#archiwum{
+	grid-area:button7;
+}
+.but{
+    background-color: #555555;
+    border: none;
+    color: white;
+	padding:14px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+#logOut{
+	background-color: #008CBA;
+	position:absolute;
+	right:0;
+	top:0;
+}
+html { margin-left: calc(100vw - 100%); }

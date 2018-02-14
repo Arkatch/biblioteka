@@ -1,0 +1,41 @@
+#formGird{
+	display:grid;
+	grid-template-columns:100px auto  auto 100px;
+	grid-template-rows: auto;
+	grid-column-gap: 10px;
+	grid-row-gap: 15px;
+	grid-template-areas: 
+			"margin1  context1  context1 margin2"
+			"margin3  context4  context5 margin4"
+			"margin5  context6  context6 margin6"
+			"margin7  context8  context8 margin8";
+}
+#borrowBookId{
+	grid-area:context1;
+}
+#reBookId{
+	grid-area:context3;
+}
+#imieNazwiskoId{
+	grid-area:context4;
+}
+#klasaId{
+	grid-area:context5;
+}
+#ksiazkaId{
+	grid-area:context6;
+	text-align:center;
+	
+}
+#borrowBookId, #reBookId, #imieNazwiskoId, #klasaId{
+	width:100%;
+	text-align:center;
+}
+#ksiazkaId > select{
+	width:50%;
+	
+}
+#submitButtonId{
+	grid-area:context8;
+	text-align:center;
+}

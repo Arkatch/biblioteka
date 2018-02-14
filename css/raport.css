@@ -1,0 +1,58 @@
+.cont{
+	display:grid;
+	grid-template-columns:auto 130px 130px 130px 130px 150px 50px 100px 100px auto; 
+	grid-template-rows: 50px;
+
+	grid-template-areas: 
+		"marg1 ctx1 ctx2 ctx3 ctx4 ctx5 ctx6 ctx7 ctx8 marg2";
+}
+.bookName{
+	grid-area:ctx1;
+}
+.wypozyczono{
+	grid-area:ctx2;
+}
+.zwrot{
+	padding:2px;
+	grid-area:ctx3;
+}
+.dniDoZwrotu, .dniDoZwrotuR{
+	grid-area:ctx4;
+}
+.ktoWyp{
+	grid-area:ctx5;
+}
+.klasa{
+	grid-area:ctx6;
+}
+.usun{
+	grid-area:ctx7;
+}
+.usunAll{
+	grid-area:ctx8;	
+}
+.bookName, .wypozyczono, .zwrot, .dniDoZwrotu, .dniDoZwrotuR, .ktoWyp, .klasa, .usun, .usunAll{
+border-right:1px solid rgb(169, 169, 169);
+border-bottom:1px solid rgb(169, 169, 169);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:100%;
+	}
+.bookName{
+border-left:1px solid rgb(169, 169, 169);
+}
+
+#frirstDiv > .bookName, #frirstDiv > .wypozyczono,#frirstDiv > .zwrot,#frirstDiv > .dniDoZwrotu,#frirstDiv > .ktoWyp,#frirstDiv > .klasa, #frirstDiv > .usun, #frirstDiv > .usunAll {
+border-top:1px solid rgb(169, 169, 169);
+}
+.hidde{
+	display:none;
+}
+.cont:hover {
+	background-color:#eef;
+}
+.dniDoZwrotuR{
+	color:red;
+}

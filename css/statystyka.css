@@ -1,0 +1,40 @@
+.block{
+	display:grid;
+	grid-template-columns: auto 170px 170px 170px auto;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	"margin1 ctx1 ctx2 ctx3 margin2";
+}
+.imgB{
+	grid-area:ctx1;
+}
+.title{
+	grid-area:ctx2;
+}
+.borrow{
+	grid-area:ctx3;
+}
+.imgB, .title, .borrow {
+	border-right:1px solid rgb(169, 169, 169);
+	border-bottom:1px solid rgb(169, 169, 169);
+	display: flex;
+	max-height: 150px;
+	justify-content: center;
+	align-items: center;
+	padding:10px;
+}
+#menu > .imgB, #menu > .title, #menu > .borrow{
+	border-top:1px solid rgb(169, 169, 169);
+	height:50px;
+}
+.imgB{
+	border-left:1px solid rgb(169, 169, 169);
+}
+.imgB > img{
+	
+	max-width: 150px;
+    max-height: 150px;
+}
+.block:hover {
+	background-color:#eef;
+}

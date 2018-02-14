@@ -1,0 +1,39 @@
+.cont{
+	display:grid;
+	grid-template-columns:auto 130px 140px 140px 140px 150px 50px 100px auto; 
+	grid-template-rows: 50px;
+
+	grid-template-areas: 
+		"marg1 ctx1 ctx2 ctx3 ctx4 ctx5 ctx6 marg2";
+}
+.lp{
+	grid-area:ctx1;
+	border-left:1px solid rgb(169, 169, 169);
+}
+.bookName{
+	grid-area:ctx2;
+}
+.wypozyczono{
+	grid-area:ctx3;
+}
+.zwrot{
+	grid-area:ctx4;
+}
+.ktoWyp{
+	grid-area:ctx5;
+}
+.klasa{
+	grid-area:ctx6;
+}
+.lp, .bookName, .wypozyczono, .zwrot, .ktoWyp, .klasa{
+	border-right:1px solid rgb(169, 169, 169);
+	border-bottom:1px solid rgb(169, 169, 169);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:100%;
+}
+#frirstDiv > .lp, #frirstDiv > .wypozyczono,#frirstDiv > .zwrot,#frirstDiv > .bookName,#frirstDiv > .ktoWyp,#frirstDiv > .klasa,#frirstDiv > .bookName {
+border-top:1px solid rgb(169, 169, 169);
+}

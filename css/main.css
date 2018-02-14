@@ -1,0 +1,174 @@
+#main{
+	min-width:400px;
+	padding:5px;
+
+}
+body{
+		margin:0;
+		background-color:#eee;
+}
+#baner{
+	min-width:405px;
+	width:100%;
+	text-align:center;
+	font-size:180%;	
+	color:white;
+	font-family:calibri;
+}
+#text{
+	padding:50px;
+	background-color: rgb(21, 85, 85);
+}
+@media screen and (min-width: 1300px) {
+	.book{
+		width:60%;
+		margin:0 auto;
+		display:grid;
+		grid-template-columns: 150px 20px auto 20px 200px 5px;
+		grid-template-areas: 
+			"bookImg marg1 bookSpec marg2 availability marg3";
+	}
+	.marg1{
+		border-left:2px solid #555555;
+		grid-area:marg3;
+	}
+	.marg2{
+		border-right:2px solid #555555;
+		grid-area:marg2;
+	}
+	hr{
+		border: 0;
+		width:60%;
+		border-top: 1px solid #eef;
+	}
+}
+@media screen and (min-width: 900px) and (max-width: 1299px) {
+	.book{
+		width:80%;
+		margin:0 auto;
+		display:grid;
+		grid-template-columns: 150px 20px auto 20px 150px 5px;
+		grid-template-areas: 
+			"bookImg marg1 bookSpec marg2 availability marg3";
+	}
+	.marg1{
+		border-left:2px solid #555555;
+		grid-area:marg3;
+	}
+	.marg2{
+		border-right:2px solid #555555;
+		grid-area:marg2;
+	}
+	hr{
+		border: 0;
+		width:80%;
+		border-top: 1px solid #eef;
+	}
+}
+@media screen and (max-width: 899px) and (min-width: 721px){
+	.book{
+		width:100%;
+		margin:0 auto;
+		display:grid;
+		grid-template-columns: 150px 20px auto 20px 140px 5px;
+		grid-template-areas: 
+			"bookImg marg1 bookSpec marg2 availability marg3";
+	}
+	.marg1{
+		border-left:2px solid #555555;
+		grid-area:marg3;
+	}
+	.marg2{
+		border-right:2px solid #555555;
+		grid-area:marg2;
+	}
+	hr{
+		border: 0;
+		width:100%;
+		border-top: 1px solid #eef;
+	}
+}
+@media screen and (max-width: 720px){
+	#main{
+		padding:0;
+		padding-top:2px;
+	}
+	.book{
+		width:99%;
+		margin:0 auto;
+		border:3px solid #555555;
+		display:grid;
+		grid-template-columns:  auto 20px 150px;
+		grid-template-areas: 
+			" bookSpec  marg1 bookImg"
+			"availability availability availability";
+	}
+	.availability, .marg1, .noavailability{
+		min-height:70px;
+		border-top: 4px solid #555555;
+	}
+	.hrRes, .marg1{
+		display:none;
+	}
+	.marg2{
+		border-right:4px solid #555555;
+		grid-area:marg1;
+	}
+}
+.bookImg{
+	grid-area:bookImg;
+}
+.bookSpec{
+	padding:5px;
+	grid-area:bookSpec;
+}
+.availability{
+	padding:5px;
+	grid-area:availability;
+	color:green;
+}
+.noavailability{
+	padding:5px;
+	grid-area:availability;
+	color:red;
+}
+.bookImg, .availability, .noavailability{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.hrRes{
+	border-top: 1px solid #555555;
+}
+.but{
+    background-color: #555555;
+    border: none;
+    color: white;
+	padding:14px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.bookImg > img{
+	max-width:150px;
+	max-height:150px;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.book{
+		clear:both;
+	}
+	.bookImg{
+		width:150px;
+		float:left;
+	}
+	.bookSpec{
+		width:50%;
+		float:left;
+	}
+	.availability, .noavailability{
+		width:15%;
+		float:left;
+	}  
+}

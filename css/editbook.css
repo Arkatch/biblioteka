@@ -1,0 +1,69 @@
+#ajaxBook{
+	display:grid;
+	grid-template-columns:100px auto auto auto 100px;
+	grid-template-rows: auto;
+	grid-column-gap: 10px;
+	grid-row-gap: 15px;
+	grid-template-areas:
+			"margin0  context0 context0 context0 margin00"	
+			"margin1  context1 context2 context3 margin2"
+			"margin3  context4 context4 context4 margin4"
+			"margin5  context5 context6 context7 margin6"
+			"margin7  context8 context9 context10 margin8";
+}
+#bookNameId{
+	grid-area:context1;
+}
+#autorBookId{
+	grid-area:context2;
+}
+#amountBookId{
+	grid-area:context3;
+}
+#descBookId{
+	grid-area:context4;
+}
+#imgUpload{
+	grid-area:context6;
+	text-align:center;
+	border-width: 1px;
+    border-style: solid;
+	border-color: rgb(169, 169, 169);
+	padding:5px;
+}
+#submitButtonId{
+	grid-area:context9;
+}
+#bookNameId, #autorBookId, #descBookId, #amountBookId, #submitButtonId{
+	text-align:center;
+}
+#formGird  input{
+	width:100%;
+}
+textarea{
+	width:100%;
+	height: 200px;
+}
+
+#oldImg, #bookId{
+	display:none;
+}
+#ksiazkaId{
+	display:grid;
+	grid-template-columns:100px auto 350px auto 100px;
+	grid-template-rows: auto;
+	grid-row-gap: 15px;
+	grid-template-areas:
+		"s margin20 context20 margin21 d"
+		"ss margin23 context21 margin32 dd";
+}
+#getBook{
+	grid-area:context20;
+}
+#gridBut{
+	grid-area:context21;
+}
+#oblique{
+	font-size:12px;
+	font-style: oblique;
+}
