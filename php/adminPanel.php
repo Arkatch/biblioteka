@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="Stylesheet" type="text/css" href="/css/statystyka.css"/>
+		<link rel="Stylesheet" type="text/css" href="../css/statystyka.css"/>
 		<meta charset="utf-8">
 		<meta name="author" content="Adrian Kucharski">
 		<title>Panel administratora</title>
-		<script type="text/javascript" src="/javascript/panel.js"></script>
-		<link rel="Stylesheet" type="text/css" href="/css/panel.css"/>
-		
+		<script type="text/javascript" src="../javascript/panel.js"></script>
+		<link rel="Stylesheet" type="text/css" href="../css/panel.css"/>	
 	</head>
 	<body>
 			<?php
@@ -23,7 +22,7 @@
 							<input class="but" id="list" type="button" value="Lista książek" />
 							<input class="but" id="archiwum" type="button" value="Archiwum" />
 							
-							<form name="logOutF" method="post" action="/php/logout.php">
+							<form name="logOutF" method="post" action="../php/logout.php">
 							<input class="but" id="logOut" type="submit" value="Wyloguj"/>
 							</form>
 						</div>

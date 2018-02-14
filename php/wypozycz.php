@@ -76,7 +76,7 @@ session_start();
 		if($dataWy and $dataOd and $imie and $klas and $idksiazki){
 			addToDB($dataWy, $dataOd, $imie, $klas, $idksiazki);
 			echo '<script>alert("Książka została wypożyczona.")</script>';
-			header('Refresh: 0; URL = /php/adminPanel.php');
+			header('Refresh: 0; URL = adminPanel.php');
 		}else{
 			echo 'Coś poszło nie tak.';
 		}

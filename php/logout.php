@@ -7,7 +7,7 @@
    unset($_SESSION["valid"]);
    unset($_SESSION["login"]);
    
-   echo 'Zostałeś poprawnie wylogowany!';
-   header('Refresh: 2; URL = login.php');
+   echo '<script>alert(Zostałeś poprawnie wylogowany!);</script>';
+   header('Refresh: 0; URL = ../php/login.php');
 	}
 ?>

@@ -40,7 +40,7 @@ if( isset($_SESSION['valid']) ){
 	$conn->close();
 	echo $temp;
 }else{
-	echo 'Coś poszło nie tak.';
-	header('Refresh: 2; URL = /php/login.php');
+	echo '<script>alert("Coś poszło nie tak.");</script>';
+	header('Refresh: 0; URL = login.php');
 }
 ?>

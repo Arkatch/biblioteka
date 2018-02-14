@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="author" content="Adrian Kucharski">
-		<link rel="Stylesheet" type="text/css" href="/css/login.css" />
+		<link rel="Stylesheet" type="text/css" href="../css/login.css" />
 		<title>Login</title>
 	</head>
 	<body>
@@ -27,7 +27,7 @@
 					sha1($_POST['password']) == $passwd) {
 					$_SESSION['valid'] = true;
 					$_SESSION['login'] = 'Administrator';
-					header('Refresh: 0; URL = /php/adminPanel.php');
+					header('Refresh: 0; URL = ../php/adminPanel.php');
                }else {
                   $msg = 'Zła nazwa użytkownika lub hasło!';
                }

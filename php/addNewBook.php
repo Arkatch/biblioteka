@@ -1,5 +1,6 @@
 <?php
 include 'addBookToDB.php';
+include 'const.php';
 session_start();
 	function uploadImg(){
 		$target_dir = "images/";
@@ -19,7 +20,7 @@ session_start();
 		
 		//Jeżeli nazwa pliku istnieje to wylosuj nową nazwę 
 		if (file_exists($target_file)) {
-			$rand = rand(1, 1000000000);
+			$rand = md5_file($target_file);
 			$target_file = $target_dir . $rand .basename($_FILES["fileToUpload"]["name"]);
 		}
 		// Czy się wrzuciło
@@ -48,11 +49,11 @@ session_start();
 			$x = uploadImg();
 		}
 		if($x){
-			$filePath = "/php/images/".$x; //ścieżka do zdjęcia
+			$filePath = PHOTOPATH.$x; //ścieżka do zdjęcia
 			if($filePath and $nazwaKsi and $autorKsi and $iloscKsi and $opisKsi){
 				addBookToDBFunc($filePath, $nazwaKsi, $autorKsi, $iloscKsi, $opisKsi);
 				echo '<script>alert("Książka została dodana.")</script>';
-			header('Refresh: 0; URL = /php/adminPanel.php');
+			header('Refresh: 0; URL = ../php/adminPanel.php');
 			}else{
 				echo "Coś poszło nie tak.";
 			}

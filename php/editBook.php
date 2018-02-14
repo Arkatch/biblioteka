@@ -1,5 +1,6 @@
 <?php
 session_start();
+	include 'const.php';
 	function uploadImg(){
 		$target_dir = "images/";
 		$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -18,7 +19,7 @@ session_start();
 		
 		//Jeżeli nazwa pliku istnieje to wylosuj nową nazwę 
 		if (file_exists($target_file)) {
-			$rand = rand(1, 1000000000);
+			$rand = md5_file($target_file);
 			$target_file = $target_dir . $rand .basename($_FILES["fileToUpload"]["name"]);
 		}
 		// Czy się wrzuciło
@@ -59,14 +60,15 @@ session_start();
 
 		if($nazwaKsi and $autorKsi and $iloscKsi and $opisKsi and $idKsi){
 			$linkFile = uploadImg();
-			$linkFile ? $linkFile="/php/images/".$linkFile : $linkFile = $_POST['oldImgF'];
+			$linkFile ? $linkFile=PHOTOPATH.$linkFile : $linkFile = $_POST['oldImgF'];
 			echo '<script>alert("Książka została zaktualizowana.")</script>';
-			header('Refresh: 0; URL = /php/adminPanel.php');
+			header('Refresh: 0; URL = adminPanel.php');
 		}
 		if($linkFile){
 			updateValueDB($nazwaKsi, $autorKsi, $iloscKsi, $opisKsi, $idKsi, $linkFile);
 		}else{
-			echo 'Coś poszło nie tak.';
+			echo '<script>alert("Coś poszło nie tak.");</script>';
+			header('Refresh: 0; URL = login.php');
 		}
 	}
 ?>
